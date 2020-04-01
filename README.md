@@ -4,7 +4,7 @@
 
 A collection of functions that use `Convex.jl` to check the compatibility of probability distributions with different inflations of the triangle causal model.
 
-A probability distribution of the triangle causal model can be studied using linear programming by creating an "inflation" of the model. By integrating different variables in the model, the probability distributions of the inflated model can be written as linear combinations of marginal distributions of the original model. A matrix *M* of *0*'s and *1*'s keeps track of which terms in the linear system are present, and a vector *b* gives the probabilities in terms of the original distribution from the triangle causal model. The goal is to find a vector *v* that satisfies the matrix equation with *M* to give *b*. The elements of *v* represent probabilities, and thus must be non-negative. The problem of finding *v* can be expressed as the following optimization problem.
+A probability distribution of the triangle causal model can be studied using linear programming by creating an "inflation" of the model. By integrating different variables in the model, the probability distributions of the inflated model can be written as linear combinations of marginal distributions of the original model. A matrix *M* of *0*'s and *1*'s keeps track of which terms in the linear system are present, and a vector *b* gives the probabilities in terms of the original distribution from the triangle causal model. The goal is to find a vector *v* that satisfies the matrix equation with *M* to give *b*. The elements of *v* represent probabilities, and thus must be non-negative. The problem of finding *v* can be expressed as the following optimization problem (taken from [1]).
 
 ![Alt text](./images/optim1.svg)
 
@@ -64,10 +64,14 @@ This problem can be run from `src/problem2.jl`, and checks the feasibility of eq
 
 ## Problem 3
 
-This problem can be run from `src/problem3.jl`, and checks the feasibility of equation (17) in [1] applied to the Cut inflation for the triangle model. As expected, the distribution and inflation are compatible. However, the distribution is not compatible with the original triangle causal model.
+This problem can be run from `src/problem3.jl`, and checks the feasibility of equation (17) in [1] applied to the Cut inflation for the triangle model. As expected, the distribution and inflation are compatible. However, the distribution is not compatible with the original triangle causal model [2].
 
 As mentioned in [1], if the linear program is infeasible, it proves that the original system is infeasible. This does not mean that, if the linear program is feasible, that the original system is feasible. As we will see in problem 4, the distribution in equation (17) applied to the Spiral inflation of the triangle model is infeasible.
 
 ## Problem 4
 
 This problem can be run from `src/problem4.jl`, and checks the feasibility of equation (17) in [1] applied to the Spiral inflation for the triangle model. As expected, the distribution and inflation are incompatible.
+
+## References
+[1] https://github.com/PerimeterInstitute/Computational-Physics-Course-Winter-2020/blob/master/class-2020-03-11/Step2_CausalStructures.pdf
+[2] https://github.com/PerimeterInstitute/Computational-Physics-Course-Winter-2020/blob/master/class-2020-03-11/CausalInferencePaper.pdf
