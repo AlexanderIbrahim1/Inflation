@@ -73,5 +73,5 @@ As mentioned in [1], if the linear program is infeasible, it proves that the ori
 This problem can be run from `src/problem4.jl`, and checks the feasibility of equation (17) in [1] applied to the Spiral inflation for the triangle model. As expected, the distribution and inflation are incompatible.
 
 ## References
-[1] https://github.com/PerimeterInstitute/Computational-Physics-Course-Winter-2020/blob/master/class-2020-03-11/Step2_CausalStructures.pdf
-[2] https://github.com/PerimeterInstitute/Computational-Physics-Course-Winter-2020/blob/master/class-2020-03-11/CausalInferencePaper.pdf
+- [1] https://github.com/PerimeterInstitute/Computational-Physics-Course-Winter-2020/blob/master/class-2020-03-11/Step2_CausalStructures.pdf
+- [2] https://github.com/PerimeterInstitute/Computational-Physics-Course-Winter-2020/blob/master/class-2020-03-11/CausalInferencePaper.pdf
